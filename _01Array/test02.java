@@ -35,6 +35,6 @@ public class test02 {
 		int [] A = {700,500};
 		int [] B = {900,300};
 		int [] C = {650,150};
-		System.out.println((C[0]>=A[0])&&((C[1]-3)>=B[1]));
+		System.out.println(((C[0]>=A[0])&&((C[1]-3)>=B[1]))&&(((C[0]+3)<=B[0])&&C[1]<=A[1]));
 	}
 }
