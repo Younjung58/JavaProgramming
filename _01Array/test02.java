@@ -30,7 +30,8 @@ public class test02 {
 		int money = 2750;
 		int pay = 10000;
 		int payback = pay-money;
-		System.out.println("천원"+(payback/1000)+"개, 백원"+((payback%1000)/100)+"개, 십원"+((payback%100)/10)+"개");
+		int [] payback2 = {payback/1000,(payback%1000)/100, (payback%100)/10};
+		System.out.println("천원"+payback2[0]+"개, 백원"+payback2[1]+"개, 십원"+payback2[2]+"개");
 		// 문제 8
 		int [] A = {700,500};
 		int [] B = {900,300};
