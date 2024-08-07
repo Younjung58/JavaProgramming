@@ -23,7 +23,7 @@ public class _00_Q3 {
 		// step1 조건찾기
 		int a = 10;
 		int b = 20;
-		int my = 16;
+		int my = 18;
 		System.out.println((my>=a)&&(my<=b));
 		// step2
 		if((my>=a)&&(my<=b)) {
