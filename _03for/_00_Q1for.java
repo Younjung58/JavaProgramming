@@ -55,19 +55,38 @@ public class _00_Q1for {
 		System.out.println("---------------------");
 		
 		// 6번 : 최저 점수를 포함하지 않은 점수의 평균을 구하시오
-		int minValue = 1000;
+		int minValue = 10000;
 		add = 0;
 		cnt = 0;
 		for(int i=0;i<5;i++) {
 			if(a[i]<=minValue) {
-			minValue = a[i];
-			}if(a[i]!=minValue) {
+				minValue = a[i];
+			}
+		}
+		for(int i=0;i<5;i++) {
+			if(a[i]!=minValue) {
 				add+=a[i];
 				cnt++;
 			}
 		}
 //		System.out.println(minValue);
 		avg = add/(double)cnt;
+		System.out.println(avg);
+		System.out.println("---------------------");
+		
+		// 6번 코드 줄이기
+		minValue = 10000;
+		add = 0;
+		cnt = 0;
+		for(int i=0;i<5;i++) {
+			if(a[i]<=minValue) {
+				minValue = a[i];
+			}
+			add+=a[i];
+			cnt++;
+		}
+		System.out.println(minValue);
+		avg = (double)(add-minValue)/(cnt-1);
 		System.out.println(avg);
 	}
 }
