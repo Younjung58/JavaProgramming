@@ -1,40 +1,8 @@
 package _03for;
 
-public class _00_test_for {
+public class _test_Refactoring {
 
 	public static void main(String[] args) {
-		// 다음 실행 결과를 손코딩으로 예측해 보세요
-//		1.
-//		for(int i=0; i<5; i++){
-//			sysout(i);
-//		}
-		// 결과: 0 1 2 3 4
-//
-//
-//		2.
-//		for(int i=5; 5>=0; i--){
-//			sysout(i);
-//		}
-		// 결과: 5 4 3 2 1 ...... 무한루프
-//
-//		3. 
-//		for(int i=0; i<100; i++){
-//			if(i%2==0){
-//				sysout(i)
-//			}
-//		}
-		// 결과: 0 2 4 6 8 ... 짝수만 도출
-//
-//		4.
-//		int sum=0;
-//		for(int i=0; i<5; i++){
-//			sum=sum+1;
-//		}
-//		sysout(sum);
-		// 결과: 5
-
-//		up -------------------------------------------------------------------
-		
 //		1. 1부터 100까지 숫자 중 홀수는 더하고 짝수는 뺀 결과값 1개를 출력하시오.
 		int add=0;
 		for(int i=1; i<=100; i++){
@@ -79,7 +47,7 @@ public class _00_test_for {
 			// 10으로 나눈 나머지(일의자리)의 합을 더하여 누적한다.
 		}
 		System.out.println(sum);
-//
+		
 //		5. 범인은 100부터 999까지 숫자에 숨어 있다.
 //		   범인은 십의 자리에 있고. 3의 배수이다. 범인 숫자를 모두 출력하시오.
 		String criminal = "";		// 범인의 숫자를 모두 출력하기 위하여 누적할 문자열을 생성
@@ -93,10 +61,10 @@ public class _00_test_for {
 		}
 		System.out.println("범인의 숫자: "+criminal);
 		
-//
 //		6. 범인을 찾아라. 0부터 100까지 숫자중 하나이다. 0부터 1 2 3 순서대로 합한 값을
 //		누적한다. 합한 값이 44를 넘어가게 하는 숫자 한개가 범인이다.
 //		범인 숫자 한 개를 출력하시오.. (단, break사용하지 않는다)
+		
 		int adds=0;
 		int cnts=0;
 		for(int i=0;i<=100;i++) {
@@ -106,8 +74,7 @@ public class _00_test_for {
 		}
 		System.out.println("범인은: "+cnts);
 		
-
-//
+		
 //		7. System.out.println("abc");  
 //		   System.out.println("def"); 
 //		   // 위코드를 실행하면
@@ -132,7 +99,7 @@ public class _00_test_for {
 		}
 		System.out.print("="+sums);
 		System.out.println("");
-
+		
 //		8. 피보나치 수열 1
 //		  i는 피보나치 수의 갯수이다.   총 8개의 피보나치 수를 구하고 합한 값을
 //		  출력하시오. 
@@ -144,39 +111,37 @@ public class _00_test_for {
 //		   }
 //		  결과 : 1 + 1 + 2 +3 + 5 + 8 + 13 = 합한 값
 		int fib = 1;
-		int [] Fib = new int[8];
-		Fib[1]=Fib[0]+fib;
-		add=0;
-		for(int i=1;i<7;i++) {
-			Fib[i+1]=Fib[i-1]+Fib[i];
+		int aFib = 0;
+		int pFib = 0;
+		int fibSum = 0;
+		for(int i = 1; i < 8; i++) {
+			System.out.print(fib);
+			System.out.print("+");
+			fibSum += fib;
+			aFib = fib + pFib;
+			pFib = fib;
+			fib = aFib;
 		}
-		for(int i=1;i<8;i++) {
-			System.out.print(Fib[i]);
-			add+=Fib[i];
-			if(i!=7) {
-				System.out.print(" "+plus+" ");
-			}
-		}
-		System.out.print(" = "+add);
-		System.out.println("");
-		
-//
+		System.out.println("=" + fibSum);
+	
+		//
 //		9. 피보나치 수열 2
 //		  i를 피보나치 수로 정의한다.
 //		  i의 변화는 1 1 2 3 5 8 13 이 된다.
 //		  for(int i=1;i < 20; ){  
 //		   
 //		   }
-		fib = 1;
-		int [] Fib2 = new int[20];
-		Fib2[1]=Fib2[0]+fib;
-		for(int i=1;i<19;i++) {
-			Fib2[i+1]=Fib2[i-1]+Fib2[i];
-		}
-		for(int i=1;i<20;i++) {
-			System.out.print(Fib2[i]+" ");
-		}
+		System.out.println("문제 9");
+			int fibA = 0;
+			int fibP = 0;
+			for(int i = 1; i < 20; ) {
+				System.out.print(i + " ");
+				fibA = i + fibP;
+				fibP = i;
+				i = fibA;
+			}
 		System.out.println("");
+			
 		
 //		10. 987654321이라는 숫자가 있다.. 변수2개와 for문 한개로
 //		   모든 자릿수를 더한 합을 구하시오.. 9+8+7+6+5+4+3+2+1 = 합
@@ -189,16 +154,7 @@ public class _00_test_for {
 			a=a-((a/i)*i)+((a/i)*(i/10));
 		}
 		System.out.println(a);
-		
-		// 버전 2
-		add = 0;
-		for(int i = 100000000; i > 0; i=i/10) {
-			add += ((987654321/i) % 10);
-		}
-		System.out.println(add);
-		
-		// 버전 3
-		
+
 	}
 
 }
