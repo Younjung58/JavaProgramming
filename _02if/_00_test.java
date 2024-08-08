@@ -56,7 +56,7 @@ public class _00_test {
 		
 		// 7번
 		int [] a = {45,34,64};
-		int a0 = (a[0]/10)+(a[0]%10);
+		int a0 = (a[0]/10)+(a[0]%10);  // 변수(a[0]처럼 변할 수 있는 값)/상수(나누는 값인 10처럼 변하지않는 고정값)
 		int a1 = (a[1]/10)+(a[1]%10);
 		int a2 = (a[2]/10)+(a[2]%10);
 		String answer = "";
@@ -69,6 +69,33 @@ public class _00_test {
 			answer="세번째";
 		}
 		System.out.println(answer);
+		
+		// 다른방식으로 maxVaule라는 최대값을 저장할 변수를 0으로 값을 지정하여 만든 후에
+		// 각각의 십의자리와 일의자리를 더한 값을 temp라는 변수에 저장한 후 단계적으로 maxValue값과 비교하여
+		// 비교, 저장의 과정을 거쳐서 maxVaule의 값을 최종적으로 구할 수 있다.
+		// 또한 이러한 maxValue의 순서, 즉 배열의 index순번을 도출하여 답을 구해야하기 때문에 
+		// maxIndex의 값도 하나의 변수로 지정하여 같이 도출하여 답을 구할 수 있다.
+		// 이러한 설명으로 코드를 작성하면 아래와 같이 나타낼 수 있다.
+		//		int[] a = {45,34,64};
+		//		int maxValue=0;
+		//		int maxIndex=0;		
+		//		
+		//		int temp=a[0]/10+a[0]%10;
+		//		if(maxValue < temp) {
+		//			maxValue = temp;
+		//			maxIndex=0;
+		//		}
+		//		temp=a[1]/10+a[1]%10;
+		//		if(maxValue < temp) {
+		//			maxValue = temp;
+		//			maxIndex=1;
+		//		}
+		//		temp=a[2]/10+a[2]%10;
+		//		if(maxValue < temp) {
+		//			maxValue = temp;
+		//			maxIndex=2;
+		//		}
+		//		System.out.println(maxIndex);
 		
 		// 8번
 		int [] x = {6,5,9};
