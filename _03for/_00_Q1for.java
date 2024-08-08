@@ -88,5 +88,6 @@ public class _00_Q1for {
 		System.out.println(minValue);
 		avg = (double)(add-minValue)/(cnt-1);
 		System.out.println(avg);
+		System.out.println("---------------------");
 	}
 }
