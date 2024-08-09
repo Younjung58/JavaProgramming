@@ -134,7 +134,7 @@ public class _test_Refactoring {
 		System.out.println("문제 9");
 			int fibA = 0;
 			int fibP = 0;
-			for(int i = 1; i < 20; ) {
+			for(int i = 1; i < 20; i++) {
 				System.out.print(i + " ");
 				fibA = i + fibP;
 				fibP = i;

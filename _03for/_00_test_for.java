@@ -178,6 +178,25 @@ public class _00_test_for {
 		}
 		System.out.println("");
 		
+		System.out.println("---------------------");
+		System.out.println("9번풀이");
+		// 사고방식의 과정
+		// 과정1. 피보나치 수열 패턴을 찾기
+		// 과정2. int i 의 값의 의미를 찾기
+		// 과정 3. 규칙을 찾아 공식 세우기: 다음 피보나치 수=이전 피보나치 수+현재 피보나치 수
+		// 과정 4. 이전 i를 저장하여 사용할 변수(bint)를 생성하고 현재 i와 이전 i를 이용하여 다음 i를 나타내기
+		int bint=0;
+		for(int i =1; i<20;) {		// for문의 증감식 부분은 생략이 가능하기 때문에 빈부분을 놓아도 됨
+			System.out.print(i+" ");
+			int temp=i;
+			i=bint+i;
+			bint=temp;		
+			// 내가 생각하지 못했던 부분
+			// (어떤 수를 저장하고 변경하고 싶을 때는 빈 그릇을 하나 만들어서 저장해놓고 변경후 이전 저장값을 가져와 사용) 
+		}
+		System.out.println("");
+		System.out.println("---------------------");
+		
 //		10. 987654321이라는 숫자가 있다.. 변수2개와 for문 한개로
 //		   모든 자릿수를 더한 합을 구하시오.. 9+8+7+6+5+4+3+2+1 = 합
 //		   합만 출력하면 됩니다.
@@ -198,6 +217,13 @@ public class _00_test_for {
 		System.out.println(add);
 		
 		// 버전 3
+		int A=987654321;
+		int add0=0;
+		for(;A>0;) {	//놓쳤던 부분: for문을 작성할때 변수의 초기값을 밖에서 지정해도 되고, 증감식을 생략할 수 있음
+			add0+=A%10;
+			A/=10;
+		}
+		System.out.println(add0);
 		
 	}
 
